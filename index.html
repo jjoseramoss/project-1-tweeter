@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tweeter</title>
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="navbar" class="navbar">
+      <!-- Tweeter Logo -->
+      <div class="tweeter-logo">
+        <img
+          class="tweeter-img"
+          src="images/icons/twitter-logo.png"
+          alt="twitter-logo"
+        />
+      </div>
+
+      <h1 class="title">Tweeter</h1>
+    </div>
+
+    <!-- Main Section -->
+    <main class="main">
+      <div class="main-box">
+        <!-- Input Tweet Form -->
+        <form class="input-section">
+          <div class="profile-pic"></div>
+
+          <div class="tweet-section">
+            <label id="tweet-label" for="tweet"></label>
+            <textarea
+              name="tweet"
+              id="input-tweet"
+              placeholder="What's Happening?"
+              oninput="
+                updateText();
+                validateInput();
+              "
+            ></textarea>
+          </div>
+        </form>
+
+        <div class="submit-section">
+          <p id="remaining-char-msg">
+            <span id="remaining-char">160</span> char remaining
+          </p>
+          <button onclick="submit()" id="tweet-btn" class="tweet-btn btn-hover">
+            Tweet
+          </button>
+        </div>
+
+        <hr />
+
+        <!-- Messages Section  -->
+        <div class="message-section">
+          <div class="profile-pic">
+            <!-- <img src="" alt="" /> -->
+          </div>
+
+          <div class="msg">
+            <p class="msg-info">
+              <strong class="msg-name">Jose Ramos</strong> @jose.ramos23@utrgv.edu -
+              5hr
+            </p>
+            <p class="msg-content">
+              Hey, CS is FUN and challenging! Hey, CS is FUN and
+              challenging!Hey, CS is FUN and challenging!Hey, CS is FUN and
+              challenging!Hey, CS is FUN and challenging!Hey, CS is FUN and
+              challenging!
+            </p>
+          </div>
+        </div>
+
+        <!-- Tweeter Icon Tools -->
+        <ul class="tweeter-tools">
+          <li>
+            <img
+              src="images/icons/chat-bubble.png"
+              alt=""
+              width="24"
+              height="24"
+            />
+          </li>
+          <li>
+            <img src="images/icons/repeat.png" alt="" width="24" height="24" />
+          </li>
+          <li>
+            <img src="images/icons/heart.png" alt="" width="24" height="24" />
+          </li>
+          <li>
+            <img src="images/icons/share.png" alt="" width="24" height="24" />
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <script src="js/tweeter.js"></script>
+  </body>
+</html>
