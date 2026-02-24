@@ -177,6 +177,17 @@ hr {
   margin-top: 40px;
 }
 
+.tool {
+  display: flex;
+  align-items: center;
+}
+
+.tool p {
+  padding-left: 8px;
+  color: gray;
+
+}
+
 /* Tablet - 768px and up */
 @media (min-width: 768px) {
   .main-box {
